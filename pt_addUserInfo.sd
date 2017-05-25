@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: http://123.57.4.104/wwwsqldesigner/ -->
+<!-- Active URL: http://123.57.4.104:9998/wwwsqldesigner/ -->
 <sql>
 <datatypes db="postgresql">
 	<group color="rgb(238,238,170)" label="Numeric">
@@ -34,207 +34,56 @@
 		<type label="SET" quote="" sql="SET" length="1"/>
 		<type label="Bit" quote="" sql="bit" length="0"/>
 	</group>
-</datatypes><table x="423" y="44" name="xjl_pt_form">
-<row name="form_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><comment>表单id</comment>
-</row>
-<row name="form_name" null="0" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<comment>表单名称</comment>
-</row>
-<row name="form_desc" null="0" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<comment>表单描述</comment>
-</row>
-<row name="form_html" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default><comment>表单内容</comment>
-</row>
-<row name="before_show_script" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default><comment>展示前脚本</comment>
-</row>
-<row name="before_submit_script" null="1" autoincrement="0">
-<datatype>MEDIUMTEXT</datatype>
-<default>NULL</default><comment>提交前脚本</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>form_id</part>
-</key>
-<comment>表单</comment>
-</table>
-<table x="693" y="105" name="xjl_pt_dict">
-<row name="dict_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><comment>字典id</comment>
-</row>
-<row name="dict_name" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<default>NULL</default><comment>字典名称</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>dict_id</part>
-</key>
-<comment>字典</comment>
-</table>
-<table x="907" y="82" name="xjl_pt_dict_value">
-<row name="dict_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><relation table="xjl_pt_dict" row="dict_id" />
-<comment>字典id</comment>
-</row>
-<row name="dict_value_code" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<default>NULL</default><comment>代码，业务表中都存code，不存name也不存id</comment>
-</row>
-<row name="dict_value_name" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<default>NULL</default><comment>值的名称</comment>
-</row>
-<row name="dict_value_id" null="1" autoincrement="0">
-<datatype>CHAR(36)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>dict_id</part>
-<part>dict_value_code</part>
-</key>
-<comment>字典的值</comment>
-</table>
-<table x="425" y="357" name="xjl_pt_form_table">
-<row name="form_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><relation table="xjl_pt_form" row="form_id" />
-<comment>表单id</comment>
-</row>
-<row name="table_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><relation table="xjl_pt_table" row="table_id" />
-<comment>表id</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>form_id</part>
-<part>table_id</part>
-</key>
-<comment>表单用到的表</comment>
-</table>
-<table x="658" y="355" name="xjl_pt_table">
-<row name="table_id" null="1" autoincrement="1">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><comment>表id</comment>
-</row>
-<row name="table_name" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default><comment>表名称</comment>
-</row>
-<row name="table_desc" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<default>NULL</default><comment>表描述</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>table_id</part>
-</key>
-<comment>业务表定义</comment>
-</table>
-<table x="869" y="302" name="xjl_pt_table_field">
-<row name="field_id" null="1" autoincrement="1">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><comment>字段id</comment>
-</row>
-<row name="field_name" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default><comment>字段名称</comment>
-</row>
-<row name="field_desc" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default><comment>字段描述</comment>
-</row>
-<row name="field_type" null="1" autoincrement="0">
-<datatype>INTEGER</datatype>
-<default>NULL</default><comment>字段类型，10字符串、20数字、30日期、40字典</comment>
-</row>
-<row name="dict_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><comment>字典id，如果类型是字典的话需要填写</comment>
-</row>
-<row name="table_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><relation table="xjl_pt_table" row="table_id" />
-<comment>表id</comment>
-</row>
-<row name="foreign_table_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><comment>如果这个字段是外键，外键对应的表的id</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>field_id</part>
-</key>
-<comment>表字段</comment>
-</table>
-<table x="51" y="30" name="xjl_pt_org">
-<row name="org" null="1" autoincrement="1">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default><comment>机构名称</comment>
-</row>
-<row name="org_name" null="1" autoincrement="0">
-<datatype>VARCHAR(255)</datatype>
-<default>NULL</default><comment>机构名称</comment>
-</row>
-<key type="PRIMARY" name="">
-<part>org</part>
-</key>
-<comment>机构名称</comment>
-</table>
-<table x="46" y="139" name="xjl_pt_user">
-<row name="user_id" null="1" autoincrement="0">
-<datatype>CHAR(36)</datatype>
-<default>NULL</default></row>
-<row name="user_name" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>user_id</part>
-</key>
-<comment>用户表</comment>
-</table>
-<table x="38" y="263" name="xjl_pt_user_password">
-<row name="user_id" null="1" autoincrement="1">
-<datatype>CHAR</datatype>
-<default>NULL</default><relation table="xjl_pt_user" row="user_id" />
-</row>
-<row name="password" null="1" autoincrement="0">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default></row>
-<key type="PRIMARY" name="">
-<part>user_id</part>
-</key>
-<comment>用户登录密码</comment>
-</table>
-<table x="42" y="411" name="xil_pt_userinfo">
+</datatypes><table x="327" y="81" name="xil_pt_userinfo">
 <row name="user_id" null="1" autoincrement="1">
 <datatype>CHAR(36)</datatype>
-<default>NULL</default><relation table="xjl_pt_user" row="user_id" />
-<comment>用户编号</comment>
+<default>NULL</default><comment>用户编号，参考用户表</comment>
 </row>
-<row name="cardno" null="0" autoincrement="0">
-<datatype>VARCHAR(18)</datatype>
+<row name="card_no" null="0" autoincrement="0">
+<datatype>CHAR(18)</datatype>
 <default>'NULL'</default><comment>身份证号</comment>
 </row>
-<row name="phoneno" null="1" autoincrement="0">
+<row name="card_name" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default></row>
+<row name="phone_no" null="1" autoincrement="0">
 <datatype>VARCHAR(11)</datatype>
 <default>NULL</default><comment>手机号</comment>
 </row>
-<row name="headshot" null="0" autoincrement="0">
-<datatype>BLOB</datatype>
-<default>'NULL'</default><comment>头像照片</comment>
-</row>
-<row name="hand_card_photo" null="0" autoincrement="0">
-<datatype>BLOB</datatype>
-<default>'NULL'</default><comment>手持正面身份证照片</comment>
-</row>
-<row name="hand_card_backphoto" null="0" autoincrement="0">
-<datatype>BLOB</datatype>
+<row name="card_front_photo_uri" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
 <default>'NULL'</default><comment>手持身份证背面照片</comment>
+</row>
+<row name="card_back_photo_uri" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default></row>
+<row name="hand_card_photo_uri" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>'NULL'</default><comment>手持正面身份证照片地址</comment>
+</row>
+<row name="head_shot_photo_uri" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>'NULL'</default><comment>头像照片地址</comment>
+</row>
+<row name="auth_state" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>认证状态：1未认证，2认证</comment>
+</row>
+<row name="auth_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default><comment>注册时间</comment>
+</row>
+<row name="autu_user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>认证人id</comment>
+</row>
+<row name="auth_channel_type" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>1窗口/3自助终端/2网上/4手机/5关联</comment>
+</row>
+<row name="auth_channel_name" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>认证渠道名称，一般指具体的设备名称，比如窗口认证，这里写的是窗口名称</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>user_id</part>
@@ -242,4 +91,3 @@
 <comment>用户基本信息</comment>
 </table>
 </sql>
-
