@@ -73,7 +73,7 @@
 <datatype>DATE</datatype>
 <default>NULL</default><comment>注册时间</comment>
 </row>
-<row name="autu_user_id" null="1" autoincrement="0">
+<row name="auth_user_id" null="1" autoincrement="0">
 <datatype>CHAR(36)</datatype>
 <default>NULL</default><comment>认证人id</comment>
 </row>
