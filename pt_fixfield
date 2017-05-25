@@ -1,0 +1,7 @@
+ALTER TABLE x ADD COLUMN org character varying(36);
+ALTER TABLE x ADD COLUMN master character varying(36);
+ALTER TABLE x ADD COLUMN create_user_id character varying(36);
+ALTER TABLE x ADD COLUMN create_date timestamp without time zone;
+ALTER TABLE x ADD COLUMN cancel_user_id character varying(36);
+ALTER TABLE x ADD COLUMN cancel_date timestamp without time zone;
+ALTER TABLE x ADD COLUMN state character varying(1);
