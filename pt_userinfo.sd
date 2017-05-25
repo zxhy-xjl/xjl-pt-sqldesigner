@@ -90,4 +90,30 @@
 </key>
 <comment>用户基本信息</comment>
 </table>
+<table x="492" y="83" name="xjl_pt_user_log">
+<row name="ip" null="0" autoincrement="0">
+<datatype>VARCHAR(30)</datatype>
+<default>'NULL'</default><comment>ip地址</comment>
+</row>
+<row name="city" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default><comment>根据ip得到的城市</comment>
+</row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>用户id，如果用户未登录则未空</comment>
+</row>
+<row name="user_name" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default><comment>用户名称</comment>
+</row>
+<row name="uri" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>请求的页面地址</comment>
+</row>
+<key type="PRIMARY" name="">
+<part>ip</part>
+</key>
+<comment>用户日志表</comment>
+</table>
 </sql>
