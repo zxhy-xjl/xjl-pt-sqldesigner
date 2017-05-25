@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://123.57.4.104:9998/wwwsqldesigner/ -->
+<sql>
+<datatypes db="postgresql">
+	<group color="rgb(238,238,170)" label="Numeric">
+		<type label="Integer" quote="" sql="INTEGER" length="0"/>
+		<type label="TINYINT" quote="" sql="TINYINT" length="0"/>
+		<type label="SMALLINT" quote="" sql="SMALLINT" length="0"/>
+		<type label="MEDIUMINT" quote="" sql="MEDIUMINT" length="0"/>
+		<type label="INT" quote="" sql="INT" length="0"/>
+		<type label="BIGINT" quote="" sql="BIGINT" length="0"/>
+		<type label="Decimal" quote="" sql="DECIMAL" length="1" re="DEC"/>
+		<type label="Single precision" quote="" sql="FLOAT" length="0"/>
+		<type label="Double precision" quote="" sql="DOUBLE" length="0" re="DOUBLE"/>
+	</group>
+	<group color="rgb(255,200,200)" label="Character">
+		<type label="Char" quote="'" sql="CHAR" length="1"/>
+		<type label="Varchar" quote="'" sql="VARCHAR" length="1"/>
+		<type label="Text" quote="'" sql="MEDIUMTEXT" length="0" re="TEXT"/>
+		<type label="Binary" quote="'" sql="BINARY" length="1"/>
+		<type label="Varbinary" quote="'" sql="VARBINARY" length="1"/>
+		<type label="BLOB" quote="'" sql="BLOB" length="0" re="BLOB"/>
+	</group>
+	<group color="rgb(200,255,200)" label="Date &amp; Time">
+		<type label="Date" quote="'" sql="DATE" length="0"/>
+		<type label="Time" quote="'" sql="TIME" length="0"/>
+		<type label="Datetime" quote="'" sql="DATETIME" length="0"/>
+		<type label="Year" quote="" sql="YEAR" length="0"/>
+		<type label="Timestamp" quote="'" sql="TIMESTAMP" length="0"/>
+	</group>
+	<group color="rgb(200,200,255)" label="Miscellaneous">
+		<type label="ENUM" quote="" sql="ENUM" length="1"/>
+		<type label="SET" quote="" sql="SET" length="1"/>
+		<type label="Bit" quote="" sql="bit" length="0"/>
+	</group>
+</datatypes><table x="327" y="81" name="xil_pt_userinfo">
+<row name="user_id" null="1" autoincrement="1">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>用户编号，参考用户表</comment>
+</row>
+<row name="card_no" null="0" autoincrement="0">
+<datatype>CHAR(18)</datatype>
+<default>'NULL'</default><comment>身份证号</comment>
+</row>
+<row name="card_name" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default></row>
+<row name="phone_no" null="1" autoincrement="0">
+<datatype>VARCHAR(11)</datatype>
+<default>NULL</default><comment>手机号</comment>
+</row>
+<row name="card_front_photo_uri" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>'NULL'</default><comment>手持身份证背面照片</comment>
+</row>
+<row name="card_back_photo_uri" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default></row>
+<row name="hand_card_photo_uri" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>'NULL'</default><comment>手持正面身份证照片地址</comment>
+</row>
+<row name="head_shot_photo_uri" null="0" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>'NULL'</default><comment>头像照片地址</comment>
+</row>
+<row name="auth_state" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>认证状态：1未认证，2认证</comment>
+</row>
+<row name="auth_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default><comment>注册时间</comment>
+</row>
+<row name="autu_user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>认证人id</comment>
+</row>
+<row name="auth_channel_type" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>1窗口/3自助终端/2网上/4手机/5关联</comment>
+</row>
+<row name="auth_channel_name" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>认证渠道名称，一般指具体的设备名称，比如窗口认证，这里写的是窗口名称</comment>
+</row>
+<key type="PRIMARY" name="">
+<part>user_id</part>
+</key>
+<comment>用户基本信息</comment>
+</table>
+</sql>
