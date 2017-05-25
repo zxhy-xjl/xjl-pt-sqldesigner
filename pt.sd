@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://123.57.4.104:9998/wwwsqldesigner/ -->
 <sql>
 <datatypes db="postgresql">
 	<group color="rgb(238,238,170)" label="Numeric">
@@ -77,9 +79,9 @@
 <comment>字典</comment>
 </table>
 <table x="712" y="123" name="xjl_pt_dict_value">
-<row name="dict_id" null="1" autoincrement="0">
-<datatype>CHAR(32)</datatype>
-<default>NULL</default><relation table="xjl_pt_dict" row="dict_id" />
+<row name="dict_id" null="0" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>'NULL'</default><relation table="xjl_pt_dict" row="dict_id" />
 <comment>字典id</comment>
 </row>
 <row name="dict_value_code" null="1" autoincrement="0">
@@ -90,6 +92,9 @@
 <datatype>VARCHAR(100)</datatype>
 <default>NULL</default><comment>值的名称</comment>
 </row>
+<row name="dict_value_id" null="0" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>'NULL'</default></row>
 <key type="PRIMARY" name="">
 <part>dict_id</part>
 <part>dict_value_code</part>
@@ -167,16 +172,11 @@
 <comment>表字段</comment>
 </table>
 <table x="54" y="91" name="xjl_pt_org">
-<row name="org" null="1" autoincrement="1">
-<datatype>VARCHAR(50)</datatype>
-<default>NULL</default><comment>机构名称</comment>
-</row>
 <row name="org_name" null="1" autoincrement="0">
 <datatype>VARCHAR(255)</datatype>
 <default>NULL</default><comment>机构名称</comment>
 </row>
 <key type="PRIMARY" name="">
-<part>org</part>
 </key>
 <comment>机构名称</comment>
 </table>
@@ -206,3 +206,4 @@
 <comment>用户登录密码</comment>
 </table>
 </sql>
+
