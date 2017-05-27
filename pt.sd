@@ -180,7 +180,7 @@
 </key>
 <comment>机构名称</comment>
 </table>
-<table x="70" y="254" name="xjl_pt_user">
+<table x="45" y="577" name="xjl_pt_user">
 <row name="user_id" null="1" autoincrement="0">
 <datatype>CHAR(36)</datatype>
 <default>NULL</default></row>
@@ -205,5 +205,41 @@
 </key>
 <comment>用户登录密码</comment>
 </table>
+<table x="526" y="561" name="xjl_pt_dept">
+<row name="dept_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>部门id</comment>
+</row>
+<row name="dept_name" null="0" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>'NULL'</default><comment>部门名称</comment>
+</row>
+<row name="parent_dept_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>上级部门</comment>
+</row>
+<key type="PRIMARY" name="">
+<part>dept_id</part>
+</key>
+<comment>部门</comment>
+</table>
+<table x="257" y="564" name="xjl_pt_user_dept">
+<row name="user_dept_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>用户部门主键id</comment>
+</row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><relation table="xjl_pt_user" row="user_id" />
+<comment>用户id</comment>
+</row>
+<row name="dept_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><relation table="xjl_pt_dept" row="dept_id" />
+<comment>部门id</comment>
+</row>
+<key type="PRIMARY" name="">
+<part>user_dept_id</part>
+</key>
+</table>
 </sql>
-
