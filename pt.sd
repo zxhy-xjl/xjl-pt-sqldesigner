@@ -242,4 +242,34 @@
 <part>user_dept_id</part>
 </key>
 </table>
+<table x="937" y="102" name="xjl_pt_data_log">
+<row name="table_name" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default><comment>表名称</comment>
+</row>
+<row name="master_value" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default><comment>主键的值</comment>
+</row>
+<row name="data_json" null="1" autoincrement="0">
+<datatype>VARCHAR(2000)</datatype>
+<default>NULL</default><comment>数据值</comment>
+</row>
+<row name="operate_user_id" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default><comment>操作人id</comment>
+</row>
+<row name="operate_date" null="1" autoincrement="0">
+<datatype>DATETIME</datatype>
+<default>NULL</default><comment>操作时间</comment>
+</row>
+<row name="operate_type" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default><comment>操作类型A添加，M修改，D删除</comment>
+</row>
+<key type="PRIMARY" name="">
+<part>table_name</part>
+</key>
+<comment>数据日志表</comment>
+</table>
 </sql>
