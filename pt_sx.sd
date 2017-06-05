@@ -106,6 +106,122 @@
 <datatype>VARCHAR(200)</datatype>
 <default>NULL</default><comment>权限划分</comment>
 </row>
+<row name="impl_content" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>实施内容</comment>
+</row>
+<row name="impl_org" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>实施机构（字典）</comment>
+</row>
+<row name="impl_org_character" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>实施主体性质（字典）</comment>
+</row>
+<row name="legal_time_limit" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default><comment>法定办结时限</comment>
+</row>
+<row name="acceptance_conditions" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>受理条件</comment>
+</row>
+<row name="application_materials" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>申请材料</comment>
+</row>
+<row name="Jointly_org" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>联办机构（字典），多个机构之间用逗号隔开</comment>
+</row>
+<row name="intermediary_service" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>中介服务</comment>
+</row>
+<row name="progress" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>办理流程</comment>
+</row>
+<row name="quantitative_limitation" null="1" autoincrement="0">
+<datatype>INTEGER</datatype>
+<default>NULL</default><comment>数量限制</comment>
+</row>
+<row name="result_name" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>结果名称</comment>
+</row>
+<row name="result_sample" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>结果样本</comment>
+</row>
+<row name="charge_flag" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default><comment>是否收费</comment>
+</row>
+<row name="charge_standard" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default><comment>收费标准</comment>
+</row>
+<row name="charge_according" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>收费依据</comment>
+</row>
+<row name="service_object" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>服务对象（字典）</comment>
+</row>
+<row name="office_type" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>办件类型（字典）</comment>
+</row>
+<row name="commitment_time_limit" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default><comment>承诺办结时限</comment>
+</row>
+<row name="open_scope" null="1" autoincrement="0">
+<datatype>VARCHAR(20)</datatype>
+<default>NULL</default><comment>通办范围</comment>
+</row>
+<row name="service_type" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>办理形式</comment>
+</row>
+<row name="appointment_flag" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default><comment>预约办理</comment>
+</row>
+<row name="online_payment_flag" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default><comment>网上支付</comment>
+</row>
+<row name="logistics_express_flag" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default><comment>物流快递</comment>
+</row>
+<row name="run_system" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>运行系统（字典）</comment>
+</row>
+<row name="service_point" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>办理地点</comment>
+</row>
+<row name="service_time" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default><comment>办理时间</comment>
+</row>
+<row name="consulting_telephone" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default><comment>咨询电话</comment>
+</row>
+<row name="frequently_asked_questions" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>常见问题</comment>
+</row>
+<row name="complaint_call" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default><comment>投诉电话</comment>
+</row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
