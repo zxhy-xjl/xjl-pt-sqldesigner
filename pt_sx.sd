@@ -2,7 +2,7 @@
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
 <!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
 <sql>
-<datatypes db="mysql">
+<datatypes db="progresql">
 <group color="rgb(238,238,170)" label="Numeric">
 <type label="Integer" quote="" sql="INTEGER" length="0"/>
 <type label="TINYINT" quote="" sql="TINYINT" length="0"/>
