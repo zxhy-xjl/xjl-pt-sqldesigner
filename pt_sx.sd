@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
-<!-- Active URL: http://ondras.zarovi.cz/sql/demo/?keyword=default -->
+<!-- Active URL: http://123.57.4.104:9998/wwwsqldesigner/ -->
 <sql>
 <datatypes db="progresql">
 <group color="rgb(238,238,170)" label="Numeric">
@@ -79,6 +79,14 @@
 <row name="deploy" null="1" autoincrement="0">
 <datatype>CHAR(1)</datatype>
 <default>NULL</default><comment>发布状态，1代表发布，0带表未发布</comment>
+</row>
+<row name="prepare_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default><comment>编制完成时间</comment>
+</row>
+<row name="prepare_user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>编制人</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -221,6 +229,26 @@
 <row name="complaint_call" null="1" autoincrement="0">
 <datatype>VARCHAR(100)</datatype>
 <default>NULL</default><comment>投诉电话</comment>
+</row>
+<row name="approval_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default><comment>审批时间</comment>
+</row>
+<row name="approval_user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>审批人</comment>
+</row>
+<row name="prepare_date" null="1" autoincrement="0">
+<datatype>DATE</datatype>
+<default>NULL</default><comment>编制完成时间</comment>
+</row>
+<row name="prepare_user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>编制人</comment>
+</row>
+<row name="deploy" null="1" autoincrement="0">
+<datatype>CHAR(1)</datatype>
+<default>NULL</default><comment>发布状态</comment>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
