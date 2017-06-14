@@ -74,19 +74,19 @@
 <datatype>CHAR(36)</datatype>
 <default>NULL</default><comment>拥有者类型</comment>
 </row>
-<row name="license_source_type" null="1" autoincrement="0">
+<row name="licence_source_type" null="1" autoincrement="0">
 <datatype>VARCHAR(100)</datatype>
 <default>NULL</default><comment>证照来源方式</comment>
 </row>
-<row name="license_trust_level" null="1" autoincrement="0">
+<row name="licence_trust_level" null="1" autoincrement="0">
 <datatype>VARCHAR(10)</datatype>
 <default>NULL</default><comment>证照可信任等级</comment>
 </row>
-<row name="license_file_url" null="1" autoincrement="0">
+<row name="licence_file_url" null="1" autoincrement="0">
 <datatype>VARCHAR(200)</datatype>
 <default>NULL</default><comment>证照url地址</comment>
 </row>
-<row name="license_file_type" null="1" autoincrement="0">
+<row name="licence_file_type" null="1" autoincrement="0">
 <datatype>VARCHAR(36)</datatype>
 <default>NULL</default><comment>证照内容类型 字典</comment>
 </row>
@@ -94,5 +94,36 @@
 <part>licence_id</part>
 </key>
 <comment>许可证</comment>
+</table>
+<table x="670" y="145" name="xjl_zz_catalog">
+<row name="catalog_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>目录id</comment>
+</row>
+<row name="catalog_name" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>目录名称</comment>
+</row>
+<row name="user_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>catalog_id</part>
+</key>
+<comment>个人空间中的目录管理</comment>
+</table>
+<table x="683" y="325" name="xjl_zz_catalog_licence">
+<row name="catalog_id" null="1" autoincrement="1">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><relation table="xjl_zz_catalog" row="catalog_id" />
+</row>
+<row name="licence_id" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><relation table="xjl_zz_licence" row="licence_id" />
+</row>
+<key type="PRIMARY" name="">
+<part>catalog_id</part>
+</key>
+<comment>个人证照目录</comment>
 </table>
 </sql>
