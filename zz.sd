@@ -66,6 +66,14 @@
 <datatype>CHAR</datatype>
 <default>NULL</default><comment>证照状态 字典</comment>
 </row>
+<row name="owner_no" null="1" autoincrement="0">
+<datatype>VARCHAR(拥有人编号)</datatype>
+<default>NULL</default><comment>个人是身份证号码，企业是统一信用代码</comment>
+</row>
+<row name="owner_type" null="1" autoincrement="0">
+<datatype>CHAR(36)</datatype>
+<default>NULL</default><comment>拥有者类型</comment>
+</row>
 <key type="PRIMARY" name="">
 <part>licence_id</part>
 </key>
