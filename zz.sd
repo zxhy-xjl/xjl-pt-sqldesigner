@@ -74,6 +74,22 @@
 <datatype>CHAR(36)</datatype>
 <default>NULL</default><comment>拥有者类型</comment>
 </row>
+<row name="license_source_type" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default><comment>证照来源方式</comment>
+</row>
+<row name="license_trust_level" null="1" autoincrement="0">
+<datatype>VARCHAR(10)</datatype>
+<default>NULL</default><comment>证照可信任等级</comment>
+</row>
+<row name="license_file_url" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default><comment>证照url地址</comment>
+</row>
+<row name="license_file_type" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default><comment>证照内容类型 字典</comment>
+</row>
 <key type="PRIMARY" name="">
 <part>licence_id</part>
 </key>
