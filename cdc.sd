@@ -50,10 +50,6 @@
 <datatype>VARCHAR(100)</datatype>
 <default>NULL</default><comment>终端类型 字典</comment>
 </row>
-<row name="cloud_detection_state" null="1" autoincrement="0">
-<datatype>VARCHAR(100)</datatype>
-<default>NULL</default><comment>云检测状态</comment>
-</row>
 <key type="PRIMARY" name="">
 <part>terminal_id</part>
 </key>
