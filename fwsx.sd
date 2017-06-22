@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- SQL XML created by WWW SQL Designer, https://github.com/ondras/wwwsqldesigner/ -->
+<!-- Active URL: http://123.57.4.104:9998/wwwsqldesigner/ -->
+<sql>
+<datatypes db="mysql">
+	<group label="Numeric" color="rgb(238,238,170)">
+		<type label="Integer" length="0" sql="INTEGER" quote=""/>
+	 	<type label="TINYINT" length="0" sql="TINYINT" quote=""/>
+	 	<type label="SMALLINT" length="0" sql="SMALLINT" quote=""/>
+	 	<type label="MEDIUMINT" length="0" sql="MEDIUMINT" quote=""/>
+	 	<type label="INT" length="0" sql="INT" quote=""/>
+		<type label="BIGINT" length="0" sql="BIGINT" quote=""/>
+		<type label="Decimal" length="1" sql="DECIMAL" re="DEC" quote=""/>
+		<type label="Single precision" length="0" sql="FLOAT" quote=""/>
+		<type label="Double precision" length="0" sql="DOUBLE" re="DOUBLE" quote=""/>
+	</group>
+
+	<group label="Character" color="rgb(255,200,200)">
+		<type label="Char" length="1" sql="CHAR" quote="'"/>
+		<type label="Varchar" length="1" sql="VARCHAR" quote="'"/>
+		<type label="Text" length="0" sql="MEDIUMTEXT" re="TEXT" quote="'"/>
+		<type label="Binary" length="1" sql="BINARY" quote="'"/>
+		<type label="Varbinary" length="1" sql="VARBINARY" quote="'"/>
+		<type label="BLOB" length="0" sql="BLOB" re="BLOB" quote="'"/>
+	</group>
+
+	<group label="Date &amp; Time" color="rgb(200,255,200)">
+		<type label="Date" length="0" sql="DATE" quote="'"/>
+		<type label="Time" length="0" sql="TIME" quote="'"/>
+		<type label="Datetime" length="0" sql="DATETIME" quote="'"/>
+		<type label="Year" length="0" sql="YEAR" quote=""/>
+		<type label="Timestamp" length="0" sql="TIMESTAMP" quote="'"/>
+	</group>
+	
+	<group label="Miscellaneous" color="rgb(200,200,255)">
+		<type label="ENUM" length="1" sql="ENUM" quote=""/>
+		<type label="SET" length="1" sql="SET" quote=""/>
+		<type label="Bit" length="0" sql="bit" quote=""/>
+	</group>
+</datatypes><table x="239" y="294" name="xil_zn_item">
+<row name="item_id" null="1" autoincrement="1">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="item_name" null="1" autoincrement="0">
+<datatype>VARCHAR(100)</datatype>
+<default>NULL</default></row>
+<row name="item_type" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="according" null="1" autoincrement="0">
+<datatype>VARCHAR(1000)</datatype>
+<default>NULL</default></row>
+<row name="impl_org" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="legal_time_limit" null="1" autoincrement="0">
+<datatype>VARCHAR(5)</datatype>
+<default>NULL</default></row>
+<row name="commitment_time_limit" null="1" autoincrement="0">
+<datatype>VARCHAR(5)</datatype>
+<default>NULL</default></row>
+<row name="result_name" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<row name="result_sample" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<row name="charge_standard" null="1" autoincrement="0">
+<datatype>VARCHAR(1000)</datatype>
+<default>NULL</default></row>
+<row name="charge_according" null="1" autoincrement="0">
+<datatype>VARCHAR(1000)</datatype>
+<default>NULL</default></row>
+<row name="application_materials" null="1" autoincrement="0">
+<datatype>VARCHAR(2000)</datatype>
+<default>NULL</default></row>
+<row name="progress" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<row name="service_type" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="review_standard" null="1" autoincrement="0">
+<datatype>VARCHAR(2000)</datatype>
+<default>NULL</default></row>
+<row name="open_scope" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="appointment_flag" null="1" autoincrement="0">
+<datatype>VARCHAR(1)</datatype>
+<default>NULL</default></row>
+<row name="logistics_express_flag" null="1" autoincrement="0">
+<datatype>VARCHAR(1)</datatype>
+<default>NULL</default></row>
+<row name="online_payment_flag" null="1" autoincrement="0">
+<datatype>VARCHAR(1)</datatype>
+<default>NULL</default></row>
+<row name="service_point" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<row name="service_time" null="1" autoincrement="0">
+<datatype>VARCHAR(50)</datatype>
+<default>NULL</default></row>
+<row name="consulting_telephone" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<row name="complaint_call" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>item_id</part>
+</key>
+<comment>办事指南</comment>
+</table>
+<table x="587" y="199" name="xjl_bs_strategy">
+<row name="strategy_id" null="1" autoincrement="1">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="strategy_title" null="1" autoincrement="0">
+<datatype>VARCHAR(200)</datatype>
+<default>NULL</default></row>
+<row name="strategy_content" null="1" autoincrement="0">
+<datatype>VARCHAR(2000)</datatype>
+<default>NULL</default></row>
+<row name="strategy_state" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+<part>strategy_id</part>
+</key>
+<comment>办事攻略</comment>
+</table>
+<table x="817" y="313" name="xjl_cj_issue">
+<row name="issue_Id" null="1" autoincrement="0">
+<datatype>VARCHAR(36)</datatype>
+<default>NULL</default></row>
+<row name="issue_title" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<row name="issue_content" null="1" autoincrement="0">
+<datatype>VARCHAR</datatype>
+<default>NULL</default></row>
+<key type="PRIMARY" name="">
+</key>
+<comment>常见问题</comment>
+</table>
+</sql>
